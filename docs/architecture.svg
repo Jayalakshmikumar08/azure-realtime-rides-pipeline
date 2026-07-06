@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="360" viewBox="0 0 1180 360" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" role="img" aria-labelledby="title desc">
   <title id="title">Azure Realtime Rides Pipeline Architecture</title>
   <desc id="desc">Realtime ride events move from a FastAPI simulator through Azure Event Hubs into Databricks bronze, silver, fact and dimension layers.</desc>
   <defs>
@@ -7,54 +7,55 @@
     </marker>
     <style>
       .bg { fill: #f8fafc; }
-      .title { fill: #0f172a; font: 700 24px Arial, sans-serif; }
-      .subtitle { fill: #475569; font: 400 14px Arial, sans-serif; }
-      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.4; rx: 8; }
-      .box-accent { fill: #eef6ff; stroke: #1f6feb; stroke-width: 1.6; rx: 8; }
-      .label { fill: #0f172a; font: 700 15px Arial, sans-serif; }
-      .detail { fill: #475569; font: 400 12px Arial, sans-serif; }
-      .arrow { stroke: #1f6feb; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
-      .swimlane { fill: #e2e8f0; font: 700 12px Arial, sans-serif; letter-spacing: .4px; }
+      .title { fill: #0f172a; font: 700 34px Arial, sans-serif; }
+      .subtitle { fill: #475569; font: 400 18px Arial, sans-serif; }
+      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; rx: 10; }
+      .box-accent { fill: #eef6ff; stroke: #1f6feb; stroke-width: 2.4; rx: 10; }
+      .label { fill: #0f172a; font: 700 22px Arial, sans-serif; text-anchor: middle; }
+      .detail { fill: #475569; font: 400 16px Arial, sans-serif; text-anchor: middle; }
+      .arrow { stroke: #1f6feb; stroke-width: 3.2; fill: none; marker-end: url(#arrow); }
+      .swimlane { fill: #d3dee9; font: 700 16px Arial, sans-serif; letter-spacing: .6px; text-anchor: middle; }
     </style>
   </defs>
-  <rect class="bg" x="0" y="0" width="1180" height="360" rx="18" />
-  <text class="title" x="48" y="52">Azure Realtime Rides Pipeline</text>
-  <text class="subtitle" x="48" y="78">Application events are streamed, structured, enriched and modelled for analytics.</text>
-  <text class="swimlane" x="68" y="126">INGEST</text>
-  <text class="swimlane" x="394" y="126">PROCESS</text>
-  <text class="swimlane" x="810" y="126">SERVE</text>
+  <rect class="bg" x="0" y="0" width="1600" height="560" rx="24" />
+  <text class="title" x="70" y="78">Azure Realtime Rides Pipeline</text>
+  <text class="subtitle" x="70" y="112">Application events are streamed, structured, enriched and modelled for analytics.</text>
+  <text class="swimlane" x="185" y="170">INGEST</text>
+  <text class="swimlane" x="765" y="170">PROCESS</text>
+  <text class="swimlane" x="1345" y="170">SERVE</text>
 
-  <rect class="box" x="48" y="150" width="150" height="92" />
-  <text class="label" x="76" y="185">FastAPI</text>
-  <text class="label" x="76" y="205">Simulator</text>
-  <text class="detail" x="76" y="226">Synthetic ride events</text>
+  <rect class="box" x="70" y="210" width="230" height="140" />
+  <text class="label" x="185" y="260">FastAPI</text>
+  <text class="label" x="185" y="290">Simulator</text>
+  <text class="detail" x="185" y="322">Synthetic ride events</text>
 
-  <rect class="box-accent" x="250" y="150" width="150" height="92" />
-  <text class="label" x="281" y="185">Azure</text>
-  <text class="label" x="281" y="205">Event Hubs</text>
-  <text class="detail" x="281" y="226">Kafka-compatible stream</text>
+  <rect class="box-accent" x="360" y="210" width="230" height="140" />
+  <text class="label" x="475" y="260">Azure</text>
+  <text class="label" x="475" y="290">Event Hubs</text>
+  <text class="detail" x="475" y="322">Kafka-compatible stream</text>
 
-  <rect class="box" x="452" y="150" width="150" height="92" />
-  <text class="label" x="480" y="185">Databricks</text>
-  <text class="label" x="480" y="205">Bronze</text>
-  <text class="detail" x="480" y="226">Typed JSON ingestion</text>
+  <rect class="box" x="650" y="210" width="230" height="140" />
+  <text class="label" x="765" y="260">Databricks</text>
+  <text class="label" x="765" y="290">Bronze</text>
+  <text class="detail" x="765" y="322">Typed JSON ingestion</text>
 
-  <rect class="box" x="654" y="150" width="150" height="92" />
-  <text class="label" x="690" y="185">Silver</text>
-  <text class="label" x="690" y="205">Enrichment</text>
-  <text class="detail" x="690" y="226">Reference lookups</text>
+  <rect class="box" x="940" y="210" width="230" height="140" />
+  <text class="label" x="1055" y="260">Silver</text>
+  <text class="label" x="1055" y="290">Enrichment</text>
+  <text class="detail" x="1055" y="322">Reference lookups</text>
 
-  <rect class="box-accent" x="856" y="150" width="150" height="92" />
-  <text class="label" x="890" y="185">Fact and</text>
-  <text class="label" x="890" y="205">Dimensions</text>
-  <text class="detail" x="890" y="226">Analytics-ready model</text>
+  <rect class="box-accent" x="1230" y="210" width="230" height="140" />
+  <text class="label" x="1345" y="260">Fact and</text>
+  <text class="label" x="1345" y="290">Dimensions</text>
+  <text class="detail" x="1345" y="322">Analytics-ready model</text>
 
-  <rect class="box" x="452" y="276" width="352" height="42" />
-  <text class="detail" x="476" y="302">Quality gates: schema control, unit tests, linting and CI validation</text>
+  <rect class="box" x="510" y="420" width="580" height="72" />
+  <text class="detail" x="800" y="450">Quality gates: schema control, unit tests, linting</text>
+  <text class="detail" x="800" y="474">and CI validation</text>
 
-  <path class="arrow" d="M198 196 H240" />
-  <path class="arrow" d="M400 196 H442" />
-  <path class="arrow" d="M602 196 H644" />
-  <path class="arrow" d="M804 196 H846" />
-  <path class="arrow" d="M628 276 V248" />
+  <path class="arrow" d="M300 280 H350" />
+  <path class="arrow" d="M590 280 H640" />
+  <path class="arrow" d="M880 280 H930" />
+  <path class="arrow" d="M1170 280 H1220" />
+  <path class="arrow" d="M800 420 V362" />
 </svg>
