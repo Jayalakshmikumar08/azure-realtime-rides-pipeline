@@ -17,14 +17,7 @@ The project is intentionally focused on the data engineering flow. It does not d
 
 ## Architecture
 
-```text
-FastAPI simulator
-  -> Azure Event Hubs
-  -> Databricks streaming ingestion
-  -> Bronze/staging ride table
-  -> Silver enriched ride table
-  -> Fact and dimension tables
-```
+![Azure realtime rides architecture](docs/architecture.svg)
 
 ## Repository Structure
 
